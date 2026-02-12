@@ -33,3 +33,13 @@ build/
 .vscode/
 /ecommerce.db
 /ssl/
+
+### Playwright Testing ###
+/playwright-report/
+/test-results/
+/node_modules/
+/.env
+
+### Monitoring ###
+/monitoring.log
+/monitoring-report-*.json
