@@ -1,0 +1,21 @@
+{
+  "name": "ecommerce-playwright-monitor",
+  "version": "1.0.0",
+  "description": "Playwright monitoring script for Spring Boot Ecommerce API",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:swagger-ui": "playwright test tests/swagger-ui-automation.spec.js",
+    "test:api-integration": "playwright test tests/api-integration.spec.js",
+    "test:guardian": "playwright test tests/ecommerce-guardian.spec.js",
+    "report": "playwright show-report",
+    "guardian": "node e2e-guardian.js",
+    "daemon": "node monitoring-daemon.js",
+    "daemon:stats": "node -e \"const d = require('./monitoring-daemon'); const daemon = new d.EcommerceMonitoringDaemon(); daemon.getMonitoringStats().then(console.log);\""
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
